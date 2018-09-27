@@ -123,7 +123,16 @@ new Vue ({
 		q6 : 2,
 		q7 : 2,
 		q9 : 2,
-		q8_other : false
+		q8_other : false,
+		type_of_disease : ["High Blood Pressure", "Low Blood Pressure", "Epilepsy/Convulsion", " AIDS or HIV Infection",
+							"Sexually Transmitted Disease", "Stomach Trouble/Ulcers","Fainting Seizure","Rapid Weight Loss",
+							"Radiation Therapy", "Joint Replacement Implant", "Heart Surgery", "Heart Attack",
+							"Thyroid Problem", "Heart Disease", "Heart Murmur", "Hepatitis/Liver Disease",
+							"Rheumatic Fever", "Hay Fever/Allergies", "Respiratory Problems", "Hepatitis/Jaundice",
+							"Tuberculosis","Swollen ankles", "Kidney Disease", "Diabetes",
+							"Chest pain", "Stroke", "Cancer/Tumors", "Anemia",
+							"Angina","Asthma","Emphysema","Bleeding Problems",
+							"Blood Diseases", "Head Injuries", "Arthritis/Rheumatism"]
 
 	},
 

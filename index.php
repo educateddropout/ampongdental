@@ -42,12 +42,11 @@
 	</nav>
 	
 	<br>
-	tests
 
 	<div class="row" id="root">
 		<form>
 		<div class="columns" >
-			<div class="column is-offset-one-quarter is-half">
+			<div class="column is-offset-1 is-10">
 				<div class="row box" >
 					<div v-if="firstPage">
 						<div class="row">
@@ -287,7 +286,7 @@
 						<div class="row">
 							<div class="is-size-6"><strong>Physician Details:</strong></div>
 						</div>
-
+						<br>
 						<!-- Name of Physician -->
 						<input-div2>
 							<template slot="fieldName">
@@ -464,59 +463,65 @@
 						<br>
 						<div class="row">
 							<div class="columns">
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_1" type="checkbox" name="q8_1">
-										<label for="q8_1">Local Anesthetic</label>
+								<div class="column is-offset-1 is-10">
+									<div class="row">
+										<div class="columns">
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_1" type="checkbox" name="q8_1">
+													<label for="q8_1">Local Anesthetic</label>
+												</div>
+											</div>
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_2" type="checkbox" name="q8_2">
+													<label for="q8_2">Antibiotics</label>
+												</div>
+											</div>
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_3" type="checkbox" name="q8_3">
+													<label for="q8_3">Sulfa Drugs</label>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_2" type="checkbox" name="q8_2">
-										<label for="q8_2">Antibiotics</label>
+									<br>
+									<div class="row">
+										<div class="columns">
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_4" type="checkbox" name="q8_4">
+													<label for="q8_4">Aspirin</label>
+												</div>
+											</div>
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_5" type="checkbox" name="q8_5">
+													<label for="q8_5">Latex</label>
+												</div>
+											</div>
+											<div class="column">
+												<div class="field">
+													<input class="is-checkradio" id="q8_6" type="checkbox" name="q8_6">
+													<label for="q8_6">Penicillin</label>
+												</div>
+											</div>
+										</div>
 									</div>
-								</div>
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_3" type="checkbox" name="q8_3">
-										<label for="q8_3">Sulfa Drugs</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="columns">
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_4" type="checkbox" name="q8_4">
-										<label for="q8_4">Local Anesthetic</label>
-									</div>
-								</div>
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_5" type="checkbox" name="q8_5">
-										<label for="q8_5">Antibiotics</label>
-									</div>
-								</div>
-								<div class="column">
-									<div class="field">
-										<input class="is-checkradio" id="q8_6" type="checkbox" name="q8_6">
-										<label for="q8_6">Sulfa Drugs</label>
-									</div>
-								</div>
-							</div>
-						</div>
-						<br>
-						<div class="row">
-							<div class="field">
-								<div class="columns">
-									<div class="column is-one-fifth">
-										<input class="is-checkradio" id="q8_other" type="checkbox" name="q8_other" v-model="q8_other">
-										<label for="q8_other">Other</label>
-									</div>
-									<div class="column is-four-fifths">
-										<input class="input is-primary" type="text" placeholder="" v-model="q8_other_text" name="q8_other_text" v-if="q8_other">
+									<br>
+									<div class="row">
+										<div class="field">
+											<div class="columns">
+												<div class="column is-one-fifth">
+													<input class="is-checkradio" id="q8_other" type="checkbox" name="q8_other" v-model="q8_other">
+													<label for="q8_other">Other</label>
+												</div>
+												<div class="column is-four-fifths">
+													<input class="input is-primary" type="text" placeholder="" v-model="q8_other_text" name="q8_other_text" v-if="q8_other">
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -568,6 +573,54 @@
 							</div>
 						</div>
 						<!-- End of Q9 -->
+						
+						<br>
+						<!-- Q10 -->
+						<input-div>
+							<template slot="fieldName">
+				                <strong>10. Blood Type</strong>
+				            </template>
+				            <input class="input is-primary" type="text" v-model="blood_type" name="blood_type">
+						</input-div>
+						<!-- End of Q10 -->
+
+						<br>
+						<!-- Q11 -->
+						<input-div>
+							<template slot="fieldName">
+				                <strong>11. Blood Pressure</strong>
+				            </template>
+				            <input class="input is-primary" type="text" v-model="blood_pressure" name="blood_pressure">
+						</input-div>
+						<!-- End of Q11 -->
+						<br>
+
+						<!-- Q12 -->
+						<div class="row">
+							<strong>12. Do you have or have you had any of the following? Please check which apply.</strong>
+							<div class="row">
+								<br>
+								<div class="columns">
+									<div class="column is-offset-1 is-10">
+										
+										<div class="row">
+											<div class="field">
+												<div class="columns">
+													<div class="column is-one-fifth">
+														<input class="is-checkradio" id="q8_other" type="checkbox" name="q8_other" v-model="q8_other">
+														<label for="q8_other">Other</label>
+													</div>
+													<div class="column is-four-fifths">
+														<input class="input is-primary" type="text" placeholder="" v-model="q8_other_text" name="q8_other_text" v-if="q8_other">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- End Q12 -->
 
 					</div>
 					
